@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 195" width="800" height="195">
+  <defs>
+    <!-- Ice-blue gradient fading to transparent for area under curve -->
+    <linearGradient id="area-gradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#58a6ff" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#58a6ff" stop-opacity="0.00" />
+    </linearGradient>
+  </defs>
+
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes drawRing {
+      from { stroke-dasharray: 0 150; }
+      to { stroke-dasharray: 150 0; }
+    }
+    @keyframes drawLineChart {
+      from { stroke-dasharray: 0 1000; }
+      to { stroke-dasharray: 1000 0; }
+    }
+    .fade-in {
+      animation: fadeIn 0.8s ease forwards;
+    }
+    .draw-ring {
+      animation: drawRing 1.2s ease-out forwards;
+    }
+    .draw-line {
+      animation: drawLineChart 1.5s ease-out forwards;
+    }
+  </style>
+
+  <!-- Outer Card Border (no rounded corners, grayscale) -->
+  <rect x="0.5" y="0.5" width="799" height="194" fill="#000000" stroke="#262626" stroke-width="1" />
+
+  <!-- Vertical Divider (separating left and right) -->
+  <line x1="520" y1="20" x2="520" y2="175" stroke="#262626" stroke-width="1" />
+
+  <!-- LEFT SECTION: Streak Statistics (with decreased font sizes) -->
+  <g class="fade-in">
+    <!-- Total Contributions -->
+    <text x="95" y="88" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="bold" text-anchor="middle">94</text>
+    <text x="95" y="115" fill="#8b949e" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" text-anchor="middle">Total Contributions</text>
+    <text x="95" y="140" fill="#8b949e" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" text-anchor="middle">Apr 30, 2024 - Present</text>
+
+    <!-- Current Streak (with circular ring and flame icon) -->
+    <!-- Circular Ring center (260, 72), radius 20 -->
+    <circle cx="260" cy="72" r="20" fill="none" stroke="#262626" stroke-width="2.5" />
+    <circle class="draw-ring" cx="260" cy="72" r="20" fill="none" stroke="#58a6ff" stroke-width="2.5" stroke-dasharray="150" transform="rotate(-90 260 72)" />
+    
+    <!-- Mask to prevent the ring line from cutting through the flame -->
+    <circle cx="260" cy="52" r="8" fill="#000000" />
+    
+    <!-- Flame Icon (translated to top center of the ring, scaled down) -->
+    <path d="M 11.36 0.17 C 11.66 0.44 11.83 0.82 11.83 1.23 C 11.82 3.23 10.19 4.39 10.19 5.37 C 10.19 6.22 10.87 6.9 11.72 6.9 C 12.35 6.9 12.9 6.52 13.13 5.92 C 13.56 7.6 15.11 8.82 16.92 8.82 C 18.9 8.82 20.5 7.22 20.5 5.24 C 20.5 4.89 20.44 4.55 20.34 4.22 C 21.6 5.35 22.4 7.02 22.4 8.87 C 22.4 12.59 19.38 15.61 15.66 15.61 C 15.28 15.61 14.9 15.58 14.53 15.52 C 14.88 15.01 15.08 14.41 15.08 13.77 C 15.08 11.96 13.62 10.5 11.81 10.5 C 11.21 10.5 10.65 10.66 10.17 10.94 C 10.06 10.19 9.77 9.48 9.33 8.88 C 8.67 9.72 8.28 10.77 8.28 11.91 C 8.28 14.77 10.6 17.09 13.46 17.09 C 13.84 17.09 14.22 17.05 14.58 16.97 C 14.22 18.06 13.18 18.84 11.96 18.84 C 10.19 18.84 8.75 17.4 8.75 15.63 C 8.75 15.29 8.81 14.95 8.9 14.63 C 7.64 15.76 6.84 17.43 6.84 19.28 C 6.84 23 9.86 26.02 13.58 26.02 C 18.52 26.02 22.52 22.02 22.52 17.08 C 22.52 10.78 17.42 5.67 11.36 0.17 Z" fill="#58a6ff" transform="translate(250.5, 40) scale(0.75)" />
+    
+    <text x="260" y="78" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="bold" text-anchor="middle">2</text>
+    <text x="260" y="115" fill="#8b949e" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" text-anchor="middle">Current Streak</text>
+    <text x="260" y="140" fill="#8b949e" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" text-anchor="middle">Aug 28 - Aug 29</text>
+
+    <!-- Longest Streak -->
+    <text x="425" y="88" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="bold" text-anchor="middle">4</text>
+    <text x="425" y="115" fill="#8b949e" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" text-anchor="middle">Longest Streak</text>
+    <text x="425" y="140" fill="#8b949e" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" text-anchor="middle">Nov 24 - Nov 27, 2025</text>
+  </g>
+
+  <!-- RIGHT SECTION: Contribution Activity Line Graph (No overlaps, increased graph) -->
+  <g class="fade-in">
+    <!-- Header Title (Consolas, Y=30) -->
+    <text x="540" y="30" fill="#8b949e" font-family="Consolas, 'SF Mono', Monaco, monospace" font-size="10" font-weight="bold" letter-spacing="1.5px">CONTRIBUTION ACTIVITY</text>
+    
+    <!-- Subtitle (Placed directly below title at Y=46, left aligned, eliminating overlap) -->
+    <text x="540" y="46" fill="#8b949e" font-family="system-ui, -apple-system, sans-serif" font-size="9.5">72 contributions in the last year</text>
+
+    <!-- Horizontal divider under headers at Y=55 -->
+    <line x1="540" y1="55" x2="780" y2="55" stroke="#262626" stroke-width="1" />
+
+    <!-- Grid / Axis Baseline (dashed, Y=165) -->
+    <line x1="540" y1="165" x2="780" y2="165" stroke="#262626" stroke-width="1" stroke-dasharray="3,3" />
+    
+    <!-- Grid Top Line (dashed, Y=70) -->
+    <line x1="540" y1="70" x2="780" y2="70" stroke="#262626" stroke-width="1" stroke-dasharray="3,3" />
+
+    <!-- Y-Axis Labels -->
+    <text x="532" y="73" fill="#8b949e" font-family="system-ui, -apple-system, sans-serif" font-size="9" text-anchor="end">11</text>
+    <text x="532" y="168" fill="#8b949e" font-family="system-ui, -apple-system, sans-serif" font-size="9" text-anchor="end">0</text>
+
+    <!-- Area under the curve (Ice-blue gradient fill, Y ends at 165) -->
+    <path d="M 540.0 70.0 C 541.5 81.5, 543.1 126.1, 544.6 139.1 C 546.2 152.0, 547.7 144.8, 549.2 147.7 C 550.8 150.6, 552.3 154.9, 553.8 156.4 C 555.4 157.8, 556.9 157.8, 558.5 156.4 C 560.0 154.9, 561.5 147.7, 563.1 147.7 C 564.6 147.7, 566.2 153.5, 567.7 156.4 C 569.2 159.2, 570.8 163.6, 572.3 165.0 C 573.8 166.4, 575.4 167.9, 576.9 165.0 C 578.5 162.1, 580.0 152.0, 581.5 147.7 C 583.1 143.4, 584.6 136.2, 586.2 139.1 C 587.7 142.0, 589.2 170.8, 590.8 165.0 C 592.3 159.2, 593.8 117.5, 595.4 104.5 C 596.9 91.6, 598.5 77.2, 600.0 87.3 C 601.5 97.3, 603.1 152.0, 604.6 165.0 C 606.2 178.0, 607.7 165.0, 609.2 165.0 C 610.8 165.0, 612.3 167.9, 613.8 165.0 C 615.4 162.1, 616.9 153.5, 618.5 147.7 C 620.0 142.0, 621.5 133.3, 623.1 130.5 C 624.6 127.6, 626.2 124.7, 627.7 130.5 C 629.2 136.2, 630.8 159.2, 632.3 165.0 C 633.8 170.8, 635.4 166.4, 636.9 165.0 C 638.5 163.6, 640.0 166.4, 641.5 156.4 C 643.1 146.3, 644.6 107.4, 646.2 104.5 C 647.7 101.7, 649.2 129.0, 650.8 139.1 C 652.3 149.2, 653.8 160.7, 655.4 165.0 C 656.9 169.3, 658.5 165.0, 660.0 165.0 C 661.5 165.0, 663.1 166.4, 664.6 165.0 C 666.2 163.6, 667.7 156.4, 669.2 156.4 C 670.8 156.4, 672.3 163.6, 673.8 165.0 C 675.4 166.4, 676.9 165.0, 678.5 165.0 C 680.0 165.0, 681.5 165.0, 683.1 165.0 C 684.6 165.0, 686.2 165.0, 687.7 165.0 C 689.2 165.0, 690.8 165.0, 692.3 165.0 C 693.8 165.0, 695.4 165.0, 696.9 165.0 C 698.5 165.0, 700.0 166.4, 701.5 165.0 C 703.1 163.6, 704.6 156.4, 706.2 156.4 C 707.7 156.4, 709.2 163.6, 710.8 165.0 C 712.3 166.4, 713.8 165.0, 715.4 165.0 C 716.9 165.0, 718.5 165.0, 720.0 165.0 C 721.5 165.0, 723.1 165.0, 724.6 165.0 C 726.2 165.0, 727.7 165.0, 729.2 165.0 C 730.8 165.0, 732.3 165.0, 733.8 165.0 C 735.4 165.0, 736.9 166.4, 738.5 165.0 C 740.0 163.6, 741.5 156.4, 743.1 156.4 C 744.6 156.4, 746.2 163.6, 747.7 165.0 C 749.2 166.4, 750.8 165.0, 752.3 165.0 C 753.8 165.0, 755.4 166.4, 756.9 165.0 C 758.5 163.6, 760.0 156.4, 761.5 156.4 C 763.1 156.4, 764.6 163.6, 766.2 165.0 C 767.7 166.4, 769.2 166.4, 770.8 165.0 C 772.3 163.6, 773.8 162.1, 775.4 156.4 C 776.9 150.6, 778.5 134.8, 780.0 130.5 L 780 165 L 540 165 Z" fill="url(#area-gradient)" stroke="none" />
+
+    <!-- Line Chart Path (Ice-blue stroke) -->
+    <path class="draw-line" d="M 540.0 70.0 C 541.5 81.5, 543.1 126.1, 544.6 139.1 C 546.2 152.0, 547.7 144.8, 549.2 147.7 C 550.8 150.6, 552.3 154.9, 553.8 156.4 C 555.4 157.8, 556.9 157.8, 558.5 156.4 C 560.0 154.9, 561.5 147.7, 563.1 147.7 C 564.6 147.7, 566.2 153.5, 567.7 156.4 C 569.2 159.2, 570.8 163.6, 572.3 165.0 C 573.8 166.4, 575.4 167.9, 576.9 165.0 C 578.5 162.1, 580.0 152.0, 581.5 147.7 C 583.1 143.4, 584.6 136.2, 586.2 139.1 C 587.7 142.0, 589.2 170.8, 590.8 165.0 C 592.3 159.2, 593.8 117.5, 595.4 104.5 C 596.9 91.6, 598.5 77.2, 600.0 87.3 C 601.5 97.3, 603.1 152.0, 604.6 165.0 C 606.2 178.0, 607.7 165.0, 609.2 165.0 C 610.8 165.0, 612.3 167.9, 613.8 165.0 C 615.4 162.1, 616.9 153.5, 618.5 147.7 C 620.0 142.0, 621.5 133.3, 623.1 130.5 C 624.6 127.6, 626.2 124.7, 627.7 130.5 C 629.2 136.2, 630.8 159.2, 632.3 165.0 C 633.8 170.8, 635.4 166.4, 636.9 165.0 C 638.5 163.6, 640.0 166.4, 641.5 156.4 C 643.1 146.3, 644.6 107.4, 646.2 104.5 C 647.7 101.7, 649.2 129.0, 650.8 139.1 C 652.3 149.2, 653.8 160.7, 655.4 165.0 C 656.9 169.3, 658.5 165.0, 660.0 165.0 C 661.5 165.0, 663.1 166.4, 664.6 165.0 C 666.2 163.6, 667.7 156.4, 669.2 156.4 C 670.8 156.4, 672.3 163.6, 673.8 165.0 C 675.4 166.4, 676.9 165.0, 678.5 165.0 C 680.0 165.0, 681.5 165.0, 683.1 165.0 C 684.6 165.0, 686.2 165.0, 687.7 165.0 C 689.2 165.0, 690.8 165.0, 692.3 165.0 C 693.8 165.0, 695.4 165.0, 696.9 165.0 C 698.5 165.0, 700.0 166.4, 701.5 165.0 C 703.1 163.6, 704.6 156.4, 706.2 156.4 C 707.7 156.4, 709.2 163.6, 710.8 165.0 C 712.3 166.4, 713.8 165.0, 715.4 165.0 C 716.9 165.0, 718.5 165.0, 720.0 165.0 C 721.5 165.0, 723.1 165.0, 724.6 165.0 C 726.2 165.0, 727.7 165.0, 729.2 165.0 C 730.8 165.0, 732.3 165.0, 733.8 165.0 C 735.4 165.0, 736.9 166.4, 738.5 165.0 C 740.0 163.6, 741.5 156.4, 743.1 156.4 C 744.6 156.4, 746.2 163.6, 747.7 165.0 C 749.2 166.4, 750.8 165.0, 752.3 165.0 C 753.8 165.0, 755.4 166.4, 756.9 165.0 C 758.5 163.6, 760.0 156.4, 761.5 156.4 C 763.1 156.4, 764.6 163.6, 766.2 165.0 C 767.7 166.4, 769.2 166.4, 770.8 165.0 C 772.3 163.6, 773.8 162.1, 775.4 156.4 C 776.9 150.6, 778.5 134.8, 780.0 130.5" fill="none" stroke="#58a6ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1000" />
+  </g>
+</svg>
