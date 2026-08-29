@@ -15,6 +15,10 @@
         letter-spacing: 0px;
       }
       
+      .typing-text tspan {
+        fill: #58a6ff;
+      }
+      
       #clip-rect {
         animation: type-text 10s infinite;
       }
