@@ -32,6 +32,6 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add assets/streak.svg
+          git add assets/streak_v2.svg
           git commit -m "auto: update streak stats svg" || exit 0
           git push

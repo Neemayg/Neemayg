@@ -136,7 +136,7 @@ def main():
   </g>
 </svg>'''
 
-    output_path = "/Users/neemaysmac/Desktop/Github_Profile/assets/streak.svg"
+    output_path = "/Users/neemaysmac/Desktop/Github_Profile/assets/streak_v2.svg"
     with open(output_path, "w") as f:
         f.write(svg_content)
     print(f"Generated unified streak SVG at: {output_path}")
