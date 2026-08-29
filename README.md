@@ -83,16 +83,16 @@ Outside the code, I’m pretty simple about it — I enjoy learning new things, 
 <p align="center">
   <table width="100%" style="border-collapse: collapse; border: 1px solid #262626; background-color: #000000; table-layout: fixed;">
     <tr>
-      <td width="60%" style="border: none; padding: 0; vertical-align: middle;">
-        <img src="https://streak-stats.demolab.com?user=Neemayg&background=000000&ring=58a6ff&fire=58a6ff&currStreakNum=ffffff&currStreakLabel=8b949e&sideNums=ffffff&sideLabels=8b949e&dates=8b949e&stroke=262626&border_radius=0&type=svg&hide_border=true&v=2" width="100%" style="display: block;" alt="GitHub Streak" />
+      <td width="65%" style="border: none; padding: 0; vertical-align: middle;">
+        <img src="https://streak-stats.demolab.com?user=Neemayg&background=000000&ring=58a6ff&fire=58a6ff&currStreakNum=ffffff&currStreakLabel=8b949e&sideNums=ffffff&sideLabels=8b949e&dates=8b949e&stroke=262626&border_radius=0&type=svg&hide_border=true&v=3" width="100%" style="display: block;" alt="GitHub Streak" />
       </td>
       <td width="1" style="background-color: #262626; border: none; padding: 0;"></td>
-      <td width="40%" style="border: none; padding: 20px 24px; vertical-align: middle; font-family: system-ui, -apple-system, sans-serif; background-color: #000000;">
-        <div style="color: #58a6ff; font-family: Consolas, 'SF Mono', Monaco, monospace; font-size: 11px; font-weight: bold; letter-spacing: 1.5px; margin-bottom: 12px; text-transform: uppercase;">CURRENTLY BUILDING</div>
-        <div style="color: #ffffff; font-size: 13px; line-height: 1.8; font-weight: bold; text-align: left;">
-          <div style="margin-bottom: 6px;"><span style="color: #58a6ff; margin-right: 8px;">&rarr;</span>Generative AI</div>
-          <div style="margin-bottom: 6px;"><span style="color: #58a6ff; margin-right: 8px;">&rarr;</span>LLM Applications</div>
-          <div style="margin-bottom: 6px;"><span style="color: #58a6ff; margin-right: 8px;">&rarr;</span>Agentic Workflows</div>
+      <td width="35%" style="border: none; padding: 20px 0 20px 32px; vertical-align: middle; font-family: system-ui, -apple-system, sans-serif; background-color: #000000;">
+        <div style="color: #8b949e; font-family: Consolas, 'SF Mono', Monaco, monospace; font-size: 10px; font-weight: bold; letter-spacing: 1.5px; margin-bottom: 12px; text-transform: uppercase;">CURRENTLY BUILDING</div>
+        <div style="color: #e6edf3; font-size: 12.5px; line-height: 1.8; font-weight: normal; text-align: left;">
+          <div style="margin-bottom: 5px;"><span style="color: #58a6ff; margin-right: 8px;">&rarr;</span>Generative AI</div>
+          <div style="margin-bottom: 5px;"><span style="color: #58a6ff; margin-right: 8px;">&rarr;</span>LLM Applications</div>
+          <div style="margin-bottom: 5px;"><span style="color: #58a6ff; margin-right: 8px;">&rarr;</span>Agentic Workflows</div>
           <div><span style="color: #58a6ff; margin-right: 8px;">&rarr;</span>RAG Systems</div>
         </div>
       </td>
