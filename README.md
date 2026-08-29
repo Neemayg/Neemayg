@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/hero.svg" width="70%" alt="Hi, I am Neemay. — Neemay Gupta Profile README Hero" />
+  <img src="./assets/hero.svg" width="100%" alt="Hi, I am Neemay. — Neemay Gupta Profile README Hero" />
 </p>
 
 
