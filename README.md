@@ -11,13 +11,41 @@ Outside the code, I’m pretty simple about it — I enjoy learning new things, 
 ### 🛠️ Stack
 
 #### Languages
-<img src="https://skillicons.dev/icons?i=java,python,js,cpp" alt="Languages" />
+<p align="left">
+  <img src="./assets/tech/cpp.svg" alt="C++" width="48" height="48" />&nbsp;
+  <img src="./assets/tech/python.svg" alt="Python" width="48" height="48" />&nbsp;
+  <img src="./assets/tech/javascript.svg" alt="JavaScript" width="48" height="48" />&nbsp;
+  <img src="./assets/tech/typescript.svg" alt="TypeScript" width="48" height="48" />&nbsp;
+  <img src="./assets/tech/c.svg" alt="C" width="48" height="48" />&nbsp;
+  <img src="./assets/tech/html5.svg" alt="HTML5" width="48" height="48" />&nbsp;
+  <img src="./assets/tech/css3.svg" alt="CSS3" width="48" height="48" />&nbsp;
+  <img src="./assets/tech/sqlite.svg" alt="SQL" width="48" height="48" />
+</p>
 
-#### Software Development
-<img src="https://skillicons.dev/icons?i=react,nodejs,spring" alt="Software Development" />
+#### Backend / Development
+<p align="left">
+  <img src="./assets/tech/fastapi.svg" alt="FastAPI" width="48" height="48" />&nbsp;
+  <img src="./assets/tech/rest-api.svg" alt="REST API" width="48" height="48" />&nbsp;
+  <img src="./assets/tech/nextjs.svg" alt="Next.js" width="48" height="48" />&nbsp;
+  <img src="./assets/tech/firebase.svg" alt="Firebase" width="48" height="48" />&nbsp;
+  <img src="./assets/tech/firestore.svg" alt="Firestore" width="48" height="48" />&nbsp;
+  <img src="./assets/tech/git.svg" alt="Git" width="48" height="48" />&nbsp;
+  <img src="./assets/tech/github.svg" alt="GitHub" width="48" height="48" />
+</p>
 
 #### AI / ML
-<img src="https://skillicons.dev/icons?i=pytorch,tensorflow" alt="AI / ML" />
+<p align="left">
+  <img src="./assets/tech/generative-ai.svg" alt="Generative AI" width="48" height="48" />&nbsp;
+  <img src="./assets/tech/llm.svg" alt="LLMs" width="48" height="48" />&nbsp;
+  <img src="./assets/tech/gemini.svg" alt="Gemini" width="48" height="48" />&nbsp;
+  <img src="./assets/tech/tensorflow-js.svg" alt="TensorFlow.js" width="48" height="48" />
+</p>
 
 #### Tools
-<img src="https://skillicons.dev/icons?i=git,github,docker,vscode" alt="Tools" />
+<p align="left">
+  <img src="./assets/tech/vscode.svg" alt="VS Code" width="48" height="48" />&nbsp;
+  <img src="./assets/tech/google-cloud.svg" alt="Google Cloud" width="48" height="48" />&nbsp;
+  <img src="./assets/tech/canva.svg" alt="Canva" width="48" height="48" />&nbsp;
+  <img src="./assets/tech/figma.svg" alt="Figma" width="48" height="48" />
+</p>
+
