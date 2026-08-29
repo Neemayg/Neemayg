@@ -58,7 +58,7 @@ Outside the code, I’m pretty simple about it — I enjoy learning new things, 
 │      Appirates · Jan 2026 — Present                         │
 │      Technical Leadership · Development · Community         │
 │                                                             │
-│  03  GSSoC'25 · SWoC                                         │
+│  03  GSSoC'25 · SWoC                                        │
 │      Open Source Contributor                                │
 │      Open-source projects · Collaboration · GitHub          │
 └─────────────────────────────────────────────────────────────┘
