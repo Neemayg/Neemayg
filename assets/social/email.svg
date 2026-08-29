@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <style>
+    path { fill: #484f58; transition: fill 0.2s ease; }
+    @media (prefers-color-scheme: dark) {
+      path { fill: #c9d1d9; }
+    }
+    a:hover path { fill: #ffffff; }
+  </style>
+  <path d="M22 4H2C.9 4 0 4.9 0 6v12c0 1.1.9 2 2 2h20c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM2 6h20v2L12 13 2 8V6zm0 12V10l10 5 10-5v8H2z" />
+</svg>
