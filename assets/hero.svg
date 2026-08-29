@@ -80,7 +80,7 @@
   <!-- Typing Text Group -->
   <g>
     <!-- Text clipped for typing effect -->
-    <text x="377" y="122" class="typing-text" clip-path="url(#clip)">Hi, I am Neemay.</text>
+    <text x="377" y="122" class="typing-text" clip-path="url(#clip)">Hi, I am <tspan fill="#58a6ff">Neemay</tspan>.</text>
     
     <!-- Blinking Cursor following the text path -->
     <rect id="cursor-rect" x="377" y="98" width="2" height="26" fill="#f5f5f7" />
