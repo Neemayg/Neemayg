@@ -6,6 +6,20 @@ I’m a Computer Science student who enjoys building things, solving problems, a
 
 Outside the code, I’m pretty simple about it — I enjoy learning new things, working with good people, and occasionally spending way too long fixing something that I probably broke myself. Build something useful, learn something new, enjoy the process.
 
+<p align="center">
+  <a href="https://www.linkedin.com/in/neemay-gupta-1a27211ba/" target="_blank">
+    <img src="./assets/social/linkedin.svg?v=1" width="24" height="24" alt="LinkedIn" />
+  </a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://www.instagram.com/neemay_gupta/?hl=en" target="_blank">
+    <img src="./assets/social/instagram.svg?v=1" width="24" height="24" alt="Instagram" />
+  </a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="mailto:neemay.gupta2007@gmail.com">
+    <img src="./assets/social/email.svg?v=1" width="24" height="24" alt="Email" />
+  </a>
+</p>
+
 ---
 
 ### 🛠️ Stack
