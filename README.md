@@ -8,6 +8,26 @@ Outside the code, I’m pretty simple about it — I enjoy learning new things, 
 
 ---
 
+### 💼 Experience
+
+**01 &nbsp; Generative AI Engineer Intern**  
+OxiaAI — *Jun 2026 — Present*  
+`LLMs` • `Agentic AI` • `RAG` • `Workflow Automation`
+
+&nbsp;
+
+**02 &nbsp; Core Technical Lead**  
+Appirates — *Jan 2026 — Present*  
+`Technical Leadership` • `Development` • `Community`
+
+&nbsp;
+
+**03 &nbsp; Open Source Contributor**  
+GSSoC'25 • SWoC  
+`Open-source projects` • `Collaboration` • `GitHub`
+
+---
+
 ### 🛠️ Stack
 
 <p align="left">
