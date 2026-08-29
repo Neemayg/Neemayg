@@ -1,6 +1,7 @@
 import os
 import urllib.request
 import json
+import re
 from datetime import datetime
 
 def format_date(date_str):
@@ -24,12 +25,13 @@ def format_range(start_str, end_str):
 
 def main():
     username = "Neemayg"
-    url = f"https://streak-stats.demolab.com/?user={username}&type=json"
     
-    print(f"Fetching streak data from: {url}")
+    # 1. Fetch Streak Stats
+    streak_url = f"https://streak-stats.demolab.com/?user={username}&type=json"
+    print(f"Fetching streak data from: {streak_url}")
     try:
         req = urllib.request.Request(
-            url, 
+            streak_url, 
             headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
         )
         with urllib.request.urlopen(req, timeout=15) as response:
@@ -43,8 +45,7 @@ def main():
             "longestStreak": {"start": "2025-11-24", "end": "2025-11-27", "length": 4},
             "currentStreak": {"start": "2026-08-28", "end": "2026-08-29", "length": 2}
         }
-    
-    # Process values
+        
     total_contribs = data.get("totalContributions", 0)
     first_contrib_str = data.get("firstContribution", "2024-04-30")
     total_range = f"{format_date(first_contrib_str)} - Present"
@@ -58,9 +59,87 @@ def main():
     long_start = data.get("longestStreak", {}).get("start", "2025-11-24")
     long_end = data.get("longestStreak", {}).get("end", "2025-11-27")
     long_range = format_range(long_start, long_end)
+
+    # 2. Fetch Contribution Activity Grid HTML
+    contribs_url = f"https://github.com/users/{username}/contributions"
+    print(f"Fetching contribution activity from: {contribs_url}")
+    weekly_contributions = [0] * 53
+    total_contribs_year = "0"
     
+    try:
+        req = urllib.request.Request(
+            contribs_url, 
+            headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
+        )
+        with urllib.request.urlopen(req, timeout=15) as response:
+            html = response.read().decode('utf-8')
+            
+        # Extract total contributions in the last year
+        total_match = re.search(r'(\d+)\s+contributions?\s+in the last year', html)
+        if total_match:
+            total_contribs_year = total_match.group(1)
+        else:
+            total_contribs_year = str(total_contribs)
+            
+        # Parse tooltips for weekly contribution values
+        pattern = r'for="contribution-day-component-\d+-(\d+)"[^>]*>([^<]+)'
+        matches = re.findall(pattern, html)
+        if matches:
+            for week_idx_str, text in matches:
+                week_idx = int(week_idx_str)
+                text = text.strip()
+                count_match = re.search(r'^(\d+)\s+contribution', text)
+                if count_match:
+                    count = int(count_match.group(1))
+                else:
+                    count = 0
+                if week_idx < 53:
+                    weekly_contributions[week_idx] += count
+        else:
+            raise ValueError("No tooltip elements found in contributions HTML")
+            
+    except Exception as e:
+        print(f"Error fetching/parsing contribution activity: {e}")
+        # Fallback curve array if github block/timeout/sunset
+        weekly_contributions = [1, 2, 4, 3, 5, 2, 1, 0, 2, 4, 6, 8, 5, 3, 2, 1, 0, 1, 3, 5, 2, 1, 0, 2, 4, 3, 2, 1, 0, 1, 2, 3, 1, 0, 0, 1, 2, 1, 0, 0, 1, 2, 1, 0, 1, 2, 3, 2, 4, 5, 6, 8, 10]
+        total_contribs_year = str(total_contribs)
+
+    # 3. Generate smooth Bezier curve path string
+    points = []
+    dx = 240.0 / 52.0  # Width of graph is 240 pixels (from X=540 to X=780)
+    max_val = max(weekly_contributions) if max(weekly_contributions) > 0 else 1
+    
+    # Y ranges from 85 (top of graph) to 160 (bottom of graph), height is 75 pixels
+    for i in range(53):
+        x = 540.0 + i * dx
+        y = 160.0 - (weekly_contributions[i] / max_val) * 75.0
+        points.append((x, y))
+        
+    path_data = f"M {points[0][0]:.1f} {points[0][1]:.1f}"
+    for i in range(52):
+        p0 = points[i]
+        p1 = points[i+1]
+        p_prev = points[i-1] if i > 0 else p0
+        p_next = points[i+2] if i < 51 else p1
+        
+        cp1_x = p0[0] + dx / 3.0
+        cp1_y = p0[1] + (p1[1] - p_prev[1]) / 6.0
+        
+        cp2_x = p1[0] - dx / 3.0
+        cp2_y = p1[1] - (p_next[1] - p0[1]) / 6.0
+        
+        path_data += f" C {cp1_x:.1f} {cp1_y:.1f}, {cp2_x:.1f} {cp2_y:.1f}, {p1[0]:.1f} {p1[1]:.1f}"
+
     # Generate SVG content
     svg_content = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 195" width="800" height="195">
+  <defs>
+    <!-- Ice-blue gradient fading to transparent for area under curve -->
+    <linearGradient id="area-gradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#58a6ff" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#58a6ff" stop-opacity="0.00" />
+    </linearGradient>
+  </defs>
+
   <style>
     @keyframes fadeIn {{
       from {{ opacity: 0; }}
@@ -70,11 +149,18 @@ def main():
       from {{ stroke-dasharray: 0 150; }}
       to {{ stroke-dasharray: 150 0; }}
     }}
+    @keyframes drawLineChart {{
+      from {{ stroke-dasharray: 0 1000; }}
+      to {{ stroke-dasharray: 1000 0; }}
+    }}
     .fade-in {{
       animation: fadeIn 0.8s ease forwards;
     }}
     .draw-ring {{
       animation: drawRing 1.2s ease-out forwards;
+    }}
+    .draw-line {{
+      animation: drawLineChart 1.5s ease-out forwards;
     }}
   </style>
 
@@ -92,7 +178,6 @@ def main():
     <text x="95" y="152" fill="#8b949e" font-family="system-ui, -apple-system, sans-serif" font-size="11" text-anchor="middle">{total_range}</text>
 
     <!-- Current Streak (with circular ring and flame icon) -->
-    <!-- Circular Ring center (260, 76), radius 24 -->
     <circle cx="260" cy="76" r="24" fill="none" stroke="#262626" stroke-width="2.5" />
     <circle class="draw-ring" cx="260" cy="76" r="24" fill="none" stroke="#58a6ff" stroke-width="2.5" stroke-dasharray="150" transform="rotate(-90 260 76)" />
     
@@ -112,31 +197,36 @@ def main():
     <text x="425" y="152" fill="#8b949e" font-family="system-ui, -apple-system, sans-serif" font-size="11" text-anchor="middle">{long_range}</text>
   </g>
 
-  <!-- RIGHT SECTION: Currently Building Panel -->
+  <!-- RIGHT SECTION: Contribution Activity Line Graph -->
   <g class="fade-in">
     <!-- Header Title (Consolas, muted gray, matching Skill Radar) -->
-    <text x="552" y="58" fill="#8b949e" font-family="Consolas, 'SF Mono', Monaco, monospace" font-size="10" font-weight="bold" letter-spacing="1.5px">CURRENTLY BUILDING</text>
+    <text x="540" y="45" fill="#8b949e" font-family="Consolas, 'SF Mono', Monaco, monospace" font-size="10" font-weight="bold" letter-spacing="1.5px">CONTRIBUTION ACTIVITY</text>
+    
+    <!-- Subtitle (right aligned, count of contributions) -->
+    <text x="780" y="45" fill="#8b949e" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" text-anchor="end">{total_contribs_year} contributions in the last year</text>
 
-    <!-- Items List (Ice-blue arrows and desaturated white text, font-weight normal) -->
-    <!-- Item 1 -->
-    <text x="552" y="84" fill="#58a6ff" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold">→</text>
-    <text x="572" y="84" fill="#e6edf3" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="normal">Generative AI</text>
+    <!-- Horizontal divider under headers -->
+    <line x1="540" y1="55" x2="780" y2="55" stroke="#262626" stroke-width="1" />
 
-    <!-- Item 2 -->
-    <text x="552" y="104" fill="#58a6ff" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold">→</text>
-    <text x="572" y="104" fill="#e6edf3" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="normal">LLM Applications</text>
+    <!-- Grid / Axis Baseline (dashed, Y=160) -->
+    <line x1="540" y1="160" x2="780" y2="160" stroke="#262626" stroke-width="1" stroke-dasharray="3,3" />
+    
+    <!-- Grid Top Line (dashed, Y=85) -->
+    <line x1="540" y1="85" x2="780" y2="85" stroke="#262626" stroke-width="1" stroke-dasharray="3,3" />
 
-    <!-- Item 3 -->
-    <text x="552" y="124" fill="#58a6ff" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold">→</text>
-    <text x="572" y="124" fill="#e6edf3" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="normal">Agentic Workflows</text>
+    <!-- Y-Axis Labels -->
+    <text x="532" y="88" fill="#8b949e" font-family="system-ui, -apple-system, sans-serif" font-size="9" text-anchor="end">{max_val}</text>
+    <text x="532" y="163" fill="#8b949e" font-family="system-ui, -apple-system, sans-serif" font-size="9" text-anchor="end">0</text>
 
-    <!-- Item 4 -->
-    <text x="552" y="144" fill="#58a6ff" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold">→</text>
-    <text x="572" y="144" fill="#e6edf3" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="normal">RAG Systems</text>
+    <!-- Area under the curve (Ice-blue gradient fill) -->
+    <path d="{path_data} L 780 160 L 540 160 Z" fill="url(#area-gradient)" stroke="none" />
+
+    <!-- Line Chart Path (Ice-blue stroke) -->
+    <path class="draw-line" d="{path_data}" fill="none" stroke="#58a6ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1000" />
   </g>
 </svg>'''
 
-    output_path = "/Users/neemaysmac/Desktop/Github_Profile/assets/streak_v3.svg"
+    output_path = "/Users/neemaysmac/Desktop/Github_Profile/assets/streak_v4.svg"
     with open(output_path, "w") as f:
         f.write(svg_content)
     print(f"Generated unified streak SVG at: {output_path}")
