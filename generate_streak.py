@@ -116,19 +116,19 @@ def main():
 
     <!-- Items List (Ice-blue arrows and desaturated white text, font-weight normal) -->
     <!-- Item 1 -->
-    <text x="552" y="84" fill="#58a6ff" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold">&amp;rarr;</text>
+    <text x="552" y="84" fill="#58a6ff" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold">→</text>
     <text x="572" y="84" fill="#e6edf3" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="normal">Generative AI</text>
 
     <!-- Item 2 -->
-    <text x="552" y="104" fill="#58a6ff" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold">&amp;rarr;</text>
+    <text x="552" y="104" fill="#58a6ff" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold">→</text>
     <text x="572" y="104" fill="#e6edf3" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="normal">LLM Applications</text>
 
     <!-- Item 3 -->
-    <text x="552" y="124" fill="#58a6ff" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold">&amp;rarr;</text>
+    <text x="552" y="124" fill="#58a6ff" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold">→</text>
     <text x="572" y="124" fill="#e6edf3" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="normal">Agentic Workflows</text>
 
     <!-- Item 4 -->
-    <text x="552" y="144" fill="#58a6ff" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold">&amp;rarr;</text>
+    <text x="552" y="144" fill="#58a6ff" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold">→</text>
     <text x="572" y="144" fill="#e6edf3" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="normal">RAG Systems</text>
   </g>
 </svg>'''
