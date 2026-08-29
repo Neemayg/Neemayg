@@ -8,15 +8,15 @@ Outside the code, I’m pretty simple about it — I enjoy learning new things, 
 
 <p align="center">
   <a href="https://www.linkedin.com/in/neemay-gupta-1a27211ba/" target="_blank">
-    <img src="./assets/social/linkedin.svg?v=3" width="135" height="36" alt="LINKEDIN" />
+    <img src="./assets/social/linkedin.svg?v=4" width="150" height="40" alt="LINKEDIN" />
   </a>
-  &nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;
   <a href="https://www.instagram.com/neemay_gupta/?hl=en" target="_blank">
-    <img src="./assets/social/instagram.svg?v=3" width="145" height="36" alt="INSTAGRAM" />
+    <img src="./assets/social/instagram.svg?v=4" width="150" height="40" alt="INSTAGRAM" />
   </a>
-  &nbsp;&nbsp;&nbsp;&nbsp;
+  &nbsp;&nbsp;
   <a href="mailto:neemay.gupta2007@gmail.com">
-    <img src="./assets/social/email.svg?v=3" width="115" height="36" alt="EMAIL" />
+    <img src="./assets/social/email.svg?v=4" width="150" height="40" alt="EMAIL" />
   </a>
 </p>
 
