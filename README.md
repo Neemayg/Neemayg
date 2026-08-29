@@ -13,33 +13,34 @@ Outside the code, I’m pretty simple about it — I enjoy learning new things, 
 <p align="left">
   <b>Languages</b> — 
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=cpp,py,js,ts,c,html,css,sqlite" height="36" align="middle" alt="Languages" />
+    <img src="https://skillicons.dev/icons?i=cpp,py,js,ts,c,html,css,sqlite" height="40" align="middle" alt="Languages" />
   </a>
 </p>
 
 <p align="left">
   <b>Backend / Development</b> — 
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=fastapi,nextjs,firebase,git,github" height="36" align="middle" alt="Backend / Development" />
+    <img src="https://skillicons.dev/icons?i=fastapi,nextjs,firebase,git,github" height="40" align="middle" alt="Backend / Development" />
   </a>
-  <img src="./assets/tech/rest-api.svg?v=2" height="36" align="middle" alt="REST API" />
-  <img src="./assets/tech/firestore.svg?v=2" height="36" align="middle" alt="Firestore" />
+  <img src="./assets/tech/rest-api.svg?v=2" height="40" align="middle" alt="REST API" />
+  <img src="./assets/tech/firestore.svg?v=2" height="40" align="middle" alt="Firestore" />
 </p>
 
 <p align="left">
   <b>AI / ML</b> — 
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=huggingface,tensorflow" height="36" align="middle" alt="AI / ML" />
+    <img src="https://skillicons.dev/icons?i=tensorflow" height="40" align="middle" alt="AI / ML" />
   </a>
-  <img src="./assets/tech/llm.svg?v=2" height="36" align="middle" alt="LLMs" />
-  <img src="./assets/tech/gemini.svg?v=2" height="36" align="middle" alt="Gemini" />
+  <img src="./assets/tech/generative-ai.svg?v=2" height="40" align="middle" alt="Generative AI" />
+  <img src="./assets/tech/llm.svg?v=2" height="40" align="middle" alt="LLMs" />
+  <img src="./assets/tech/gemini.svg?v=2" height="40" align="middle" alt="Gemini" />
 </p>
 
 <p align="left">
   <b>Tools</b> — 
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=vscode,gcp,figma" height="36" align="middle" alt="Tools" />
+    <img src="https://skillicons.dev/icons?i=vscode,gcp,figma" height="40" align="middle" alt="Tools" />
   </a>
-  <img src="./assets/tech/canva.svg?v=2" height="36" align="middle" alt="Canva" />
+  <img src="./assets/tech/canva.svg?v=2" height="40" align="middle" alt="Canva" />
 </p>
 
