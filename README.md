@@ -10,36 +10,36 @@ Outside the code, I’m pretty simple about it — I enjoy learning new things, 
 
 ### 🛠️ Stack
 
-#### Languages
 <p align="left">
+  <b>Languages</b> — 
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=cpp,py,js,ts,c,html,css,sqlite" alt="Languages" />
+    <img src="https://skillicons.dev/icons?i=cpp,py,js,ts,c,html,css,sqlite" height="36" align="middle" alt="Languages" />
   </a>
 </p>
 
-#### Backend / Development
 <p align="left">
+  <b>Backend / Development</b> — 
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=fastapi,nextjs,firebase,git,github" alt="Backend / Development" />
+    <img src="https://skillicons.dev/icons?i=fastapi,nextjs,firebase,git,github" height="36" align="middle" alt="Backend / Development" />
   </a>
-  <img src="./assets/tech/rest-api.svg?v=2" height="48" alt="REST API" />
-  <img src="./assets/tech/firestore.svg?v=2" height="48" alt="Firestore" />
+  <img src="./assets/tech/rest-api.svg?v=2" height="36" align="middle" alt="REST API" />
+  <img src="./assets/tech/firestore.svg?v=2" height="36" align="middle" alt="Firestore" />
 </p>
 
-#### AI / ML
 <p align="left">
+  <b>AI / ML</b> — 
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=huggingface,tensorflow" alt="AI / ML" />
+    <img src="https://skillicons.dev/icons?i=huggingface,tensorflow" height="36" align="middle" alt="AI / ML" />
   </a>
-  <img src="./assets/tech/llm.svg?v=2" height="48" alt="LLMs" />
-  <img src="./assets/tech/gemini.svg?v=2" height="48" alt="Gemini" />
+  <img src="./assets/tech/llm.svg?v=2" height="36" align="middle" alt="LLMs" />
+  <img src="./assets/tech/gemini.svg?v=2" height="36" align="middle" alt="Gemini" />
 </p>
 
-#### Tools
 <p align="left">
+  <b>Tools</b> — 
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=vscode,gcp,figma" alt="Tools" />
+    <img src="https://skillicons.dev/icons?i=vscode,gcp,figma" height="36" align="middle" alt="Tools" />
   </a>
-  <img src="./assets/tech/canva.svg?v=2" height="48" alt="Canva" />
+  <img src="./assets/tech/canva.svg?v=2" height="36" align="middle" alt="Canva" />
 </p>
 
