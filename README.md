@@ -76,3 +76,11 @@ Outside the code, I’m pretty simple about it — I enjoy learning new things, 
   <img src="./assets/radar.svg?v=1" width="100%" alt="Skill Radar" />
 </p>
 
+---
+
+### 🔥 GitHub Streak
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=Neemayg&background=000000&border=262626&stroke=262626&ring=58a6ff&fire=58a6ff&currStreakNum=ffffff&currStreakLabel=8b949e&sideNums=ffffff&sideLabels=8b949e&dates=8b949e&border_radius=0&type=svg&v=1" width="100%" alt="GitHub Streak" />
+</p>
+
