@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 260" width="800" height="260">
+  <!-- Stylesheet for progressive enhancement animation -->
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes drawPoly {
+      from { stroke-dasharray: 0 500; opacity: 0; }
+      to { stroke-dasharray: 500 0; opacity: 1; }
+    }
+    .grid-line {
+      opacity: 0;
+      animation: fadeIn 0.8s ease forwards;
+    }
+    .grid-axis {
+      opacity: 0;
+      animation: fadeIn 0.8s ease 0.2s forwards;
+    }
+    .data-poly {
+      opacity: 0;
+      animation: drawPoly 1.2s ease-out 0.4s forwards;
+    }
+    .data-point {
+      opacity: 0;
+      animation: fadeIn 0.4s ease 1.4s forwards;
+    }
+    .text-label {
+      opacity: 0;
+      animation: fadeIn 0.8s ease 1.0s forwards;
+    }
+    .text-heading {
+      opacity: 0;
+      animation: fadeIn 0.8s ease 0.6s forwards;
+    }
+    .text-content {
+      opacity: 0;
+      animation: fadeIn 0.8s ease 0.8s forwards;
+    }
+  </style>
+
+  <!-- Border Card (grayscale, transparent bg so it blends, black rect behind content) -->
+  <rect x="0.5" y="0.5" width="799" height="259" fill="#000000" stroke="#ffffff" stroke-opacity="0.15" stroke-width="1" />
+
+  <!-- Radar Chart Group -->
+  <g class="radar-chart">
+    <!-- Grid Polygons (Hexagons) -->
+    <!-- R=20 -->
+    <polygon class="grid-line" points="200,110 217.32,120 217.32,140 200,150 182.68,140 182.68,120" stroke="#30363d" stroke-dasharray="2,2" stroke-width="1" fill="none" />
+    <!-- R=40 -->
+    <polygon class="grid-line" points="200,90 234.64,110 234.64,150 200,170 165.36,150 165.36,110" stroke="#30363d" stroke-dasharray="2,2" stroke-width="1" fill="none" />
+    <!-- R=60 -->
+    <polygon class="grid-line" points="200,70 251.96,100 251.96,160 200,190 148.04,160 148.04,100" stroke="#30363d" stroke-dasharray="2,2" stroke-width="1" fill="none" />
+    <!-- R=80 (Outer Boundary) -->
+    <polygon class="grid-line" points="200,50 269.28,90 269.28,170 200,210 130.72,170 130.72,90" stroke="#30363d" stroke-width="1" fill="none" />
+
+    <!-- Axes Lines -->
+    <!-- Up -->
+    <line class="grid-axis" x1="200" y1="130" x2="200" y2="50" stroke="#30363d" stroke-width="1" stroke-dasharray="3,3" />
+    <!-- 2 o'clock -->
+    <line class="grid-axis" x1="200" y1="130" x2="269.28" y2="90" stroke="#30363d" stroke-width="1" stroke-dasharray="3,3" />
+    <!-- 4 o'clock -->
+    <line class="grid-axis" x1="200" y1="130" x2="269.28" y2="170" stroke="#30363d" stroke-width="1" stroke-dasharray="3,3" />
+    <!-- 6 o'clock -->
+    <line class="grid-axis" x1="200" y1="130" x2="200" y2="210" stroke="#30363d" stroke-width="1" stroke-dasharray="3,3" />
+    <!-- 8 o'clock -->
+    <line class="grid-axis" x1="200" y1="130" x2="130.72" y2="170" stroke="#30363d" stroke-width="1" stroke-dasharray="3,3" />
+    <!-- 10 o'clock -->
+    <line class="grid-axis" x1="200" y1="130" x2="130.72" y2="90" stroke="#30363d" stroke-width="1" stroke-dasharray="3,3" />
+
+    <!-- Axes Labels -->
+    <text class="text-label" x="200" y="38" fill="#8b949e" font-family="Consolas, 'SF Mono', Monaco, monospace" font-size="9" font-weight="bold" letter-spacing="1px" text-anchor="middle">PROGRAMMING</text>
+    <text class="text-label" x="280" y="93" fill="#8b949e" font-family="Consolas, 'SF Mono', Monaco, monospace" font-size="9" font-weight="bold" letter-spacing="1px" text-anchor="start">WEB DEVELOPMENT</text>
+    <text class="text-label" x="280" y="173" fill="#8b949e" font-family="Consolas, 'SF Mono', Monaco, monospace" font-size="9" font-weight="bold" letter-spacing="1px" text-anchor="start">BACKEND</text>
+    <text class="text-label" x="200" y="225" fill="#8b949e" font-family="Consolas, 'SF Mono', Monaco, monospace" font-size="9" font-weight="bold" letter-spacing="1px" text-anchor="middle">DEVELOPER TOOLS</text>
+    <text class="text-label" x="120" y="173" fill="#8b949e" font-family="Consolas, 'SF Mono', Monaco, monospace" font-size="9" font-weight="bold" letter-spacing="1px" text-anchor="end">APIs &amp; SYSTEMS</text>
+    <text class="text-label" x="120" y="93" fill="#8b949e" font-family="Consolas, 'SF Mono', Monaco, monospace" font-size="9" font-weight="bold" letter-spacing="1px" text-anchor="end">AI / ML</text>
+
+    <!-- Data Polygon (Accent Color #58a6ff) -->
+    <polygon class="data-poly" points="200,62 245.03,104 255.43,162 200,186 148.04,160 141.11,96" fill="#58a6ff" fill-opacity="0.15" stroke="#58a6ff" stroke-width="1.5" />
+
+    <!-- Data Points -->
+    <circle class="data-point" cx="200" cy="62" r="3" fill="#58a6ff" />
+    <circle class="data-point" cx="245.03" cy="104" r="3" fill="#58a6ff" />
+    <circle class="data-point" cx="255.43" cy="162" r="3" fill="#58a6ff" />
+    <circle class="data-point" cx="200" cy="186" r="3" fill="#58a6ff" />
+    <circle class="data-point" cx="148.04" cy="160" r="3" fill="#58a6ff" />
+    <circle class="data-point" cx="141.11" cy="96" r="3" fill="#58a6ff" />
+  </g>
+
+  <!-- Right Side Text Content -->
+  <!-- CURRENTLY BUILDING -->
+  <text class="text-heading" x="440" y="70" fill="#8b949e" font-family="Consolas, 'SF Mono', Monaco, monospace" font-size="10" font-weight="bold" letter-spacing="1.5px">CURRENTLY BUILDING</text>
+  <text class="text-content" x="440" y="96" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold" letter-spacing="0.5px">Generative AI · LLMs · Agentic Workflows</text>
+
+  <!-- EXPLORING -->
+  <text class="text-heading" x="440" y="160" fill="#8b949e" font-family="Consolas, 'SF Mono', Monaco, monospace" font-size="10" font-weight="bold" letter-spacing="1.5px">EXPLORING</text>
+  <text class="text-content" x="440" y="186" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold" letter-spacing="0.5px">RAG · AI Agents · Production AI</text>
+</svg>

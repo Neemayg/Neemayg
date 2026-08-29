@@ -68,3 +68,11 @@ Outside the code, I’m pretty simple about it — I enjoy learning new things, 
 └─────────────────────────────────────────────────────────────┘
 ```
 
+---
+
+### 📊 Skill Radar
+
+<p align="center">
+  <img src="./assets/radar.svg?v=1" width="100%" alt="Skill Radar" />
+</p>
+
