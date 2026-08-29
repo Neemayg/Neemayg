@@ -81,6 +81,6 @@ Outside the code, I’m pretty simple about it — I enjoy learning new things, 
 ### 🔥 GitHub Streak
 
 <p align="center">
-  <img src="./assets/streak.svg?v=2" width="100%" alt="GitHub Streak" />
+  <img src="./assets/streak.svg?v=3" width="100%" alt="GitHub Streak" />
 </p>
 
