@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/hero.svg?v=4" width="100%" alt="Hi, I am Neemay. — Neemay Gupta Profile README Hero" />
+  <img src="./assets/hero.svg?v=5" width="100%" alt="Hi, I am Neemay. — Neemay Gupta Profile README Hero" />
 </p>
 
 I’m a Computer Science student who enjoys building things, solving problems, and figuring out how software works under the hood. I like turning ideas into something real, whether it’s a weekend hackathon project, an open-source contribution, or just something I decided to build because I was curious. My team was a finalist at the IBM National Hackathon, and I’m currently exploring AI/ML while getting better at the fundamentals that make good software work.
