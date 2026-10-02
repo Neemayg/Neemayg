@@ -227,7 +227,9 @@ def main():
   </g>
 </svg>'''
 
-    output_path = "/Users/neemaysmac/Desktop/Github_Profile/assets/streak_v5.svg"
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    output_path = os.path.join(base_dir, "assets", "streak_v5.svg")
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
     with open(output_path, "w") as f:
         f.write(svg_content)
     print(f"Generated unified streak SVG at: {output_path}")
