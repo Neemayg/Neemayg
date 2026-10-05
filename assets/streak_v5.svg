@@ -62,7 +62,7 @@
   <!-- RIGHT SECTION: Contribution Activity Line Graph -->
   <g class="fade-in">
     <text x="540" y="30" fill="#8b949e" font-family="Consolas, 'SF Mono', Monaco, monospace" font-size="10" font-weight="bold" letter-spacing="1.5px">CONTRIBUTION ACTIVITY</text>
-    <text x="540" y="46" fill="#8b949e" font-family="system-ui, -apple-system, sans-serif" font-size="9.5">951 contributions in the last year</text>
+    <text x="540" y="46" fill="#8b949e" font-family="system-ui, -apple-system, sans-serif" font-size="9.5">948 contributions in the last year</text>
 
     <line x1="540" y1="55" x2="780" y2="55" stroke="#262626" stroke-width="1" />
     <line x1="540" y1="165" x2="780" y2="165" stroke="#262626" stroke-width="1" stroke-dasharray="3,3" />
